@@ -6,10 +6,9 @@
         <meta name = "viewport" content = "width= device-width, initial-scale = 1">
         <meta name = "description" content = "Informatics Capstone Project: Template for Team Core">
         <title> BeQuick: The Beverage Delivery </title>
-        <link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel = "stylesheet" href = "css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "css/index.css">
+        <link rel = "stylesheet" href= "css/offcanvas.css">
     </head>
     <body>
         <nav class = "navbar navbar-inverse navbar-fixed-top">
@@ -43,12 +42,27 @@
             </div>
         </nav>
         <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12">
+                    <div class = "visible-xs">
+                        <button class = "btn btn-primary btn-xs" data-toggle = "offcanvas"> Toogle Lists </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "container">
             <div class = "row row-offcanvas row-offcanvas-left">
-                <div class = "col-md-3 sidebar-offcanvas" id = "sidebar" role = "navigation">
+                <div class = "col-md-3 sidebar-offcanvas" id = "sidebar">
                     <div class = "list-group">
                         <a href = "#" class = "list-group-item active"> Link </a>
                         <a href = "#" class = "list-group-item"> Link </a>
-                    </div>                    
+                        <a href = "#" class = "list-group-item"> Link </a>
+                        <a href = "#" class = "list-group-item"> Link </a>
+                        <a href = "#" class = "list-group-item"> Link </a>
+                        <a href = "#" class = "list-group-item"> Link </a>
+                        <a href = "#" class = "list-group-item"> Link </a>
+                        <a href = "#" class = "list-group-item"> Link </a>
+                    </div>
                 </div>
                 <div class = "col-md-9">
                     <div class = "row carousel-holder">
@@ -154,5 +168,8 @@
                 </div>
             </footer>
         </div>
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src = "js/bootstrap.js"></script>
+        <script src = "js/offcanvas.js"></script>
     </body>
 </html>
