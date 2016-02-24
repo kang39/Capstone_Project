@@ -234,6 +234,20 @@ header .header-content .header-content-inner p {
   padding-right: 0;
   padding-left: 0;
 }
+
+#different_btn {
+
+    background-color: #f05f40;
+    color: white;
+    
+}
+
+#different_btn:hover {
+    
+    color: black;
+}
+
+
 .btn-default {
   color: #222222;
   background-color: #ffffff;
