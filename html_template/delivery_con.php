@@ -1,3 +1,14 @@
+<?PHP
+require_once("./include/membersite_config.php");
+
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -5,7 +16,7 @@
         <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
         <meta name = "viewport" content = "width= device-width, initial-scale = 1">
         <meta name = "description" content = "Informatics Capstone Project: Template for Team Core">
-        <title> BeQuick: The Beverage Pick-Up </title>
+        <title> BeQuick: The Beverage Delivery </title>
         <link rel = "stylesheet" href = "css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "css/template.css">
         <link rel = "stylesheet" href= "css/offcanvas.css">
@@ -26,10 +37,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="pickup.html"> Pick-Up </a></li>
-                        <li><a href="delivery.html">Delivery</a></li>
-                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
-                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
+                        <li><a href="pickup_con.php"> Pick-Up </a></li>
+                        <li><a href="delivery_con.php">Delivery</a></li>
+                        <li><a href = "#"><span class = "glyphicon glyphicon-user"> Account Settings </span></a></li>
+                        <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"> Log-Out </span></a></li>
+                    </li>  
                     </ul>
                 </div>
             </div>
@@ -48,19 +60,19 @@
                 <div class = "col-md-3 sidebar-offcanvas" id = "sidebar">
                     <div class = "list-group">
                         <a href = "#" class = "list-group-item active"> All </a>
-                        <a href = "#" class = "list-group-item"> Bloomington Bagel Co </a>
-                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Café & Cakery </a>
-						<a href = "#" class = "list-group-item"> Red Mango </a>
+                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Caf챕 & Cakery </a>
+                        <a href = "#" class = "list-group-item"> Bub?셲 Burgers & Ice Cream </a>
+						<a href = "#" class = "list-group-item"> McAlister?셲 Deli </a>
 						<a href = "#" class = "list-group-item"> Panera Bread </a>
+						<a href = "#" class = "list-group-item"> Red Mango </a>
 						<a href = "#" class = "list-group-item"> Scholars Inn Bakehouse </a>
 						<a href = "#" class = "list-group-item"> Soma </a>
 						<a href = "#" class = "list-group-item"> Starbucks </a>
 						<a href = "#" class = "list-group-item"> The Chocolate Moose </a>
-						<a href = "#" class = "list-group-item"> The Pour House Cafe </a>
 						
                     </div>
                 </div>
-                <div class = "col-md-9">
+               <div class = "col-md-9">
                     <div class = "row carousel-holder">
                         <div class = "col-md-12">
                             <div id = "myCarousel" class = "carousel slide" data-ride = "carousel">
@@ -92,9 +104,9 @@
                     <div class = "row">
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/soma.jpg" alt = "">
+                                <img src = "/include/soma.jpg" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 5 Minutes </h4>
+                                    <h4 class = "pull-right"> 15 Minutes </h4>
                                     <h4><a href = "#"> Soma </a></h4>
                                     <p><li>322 E Kirkwood Ave</li>
 									<li>Opens at 6:30 AM</li></p>
@@ -113,15 +125,15 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/thepourhousecafe.jpg" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 6 Minutes </h4>
-                                    <h4><a href = "#"> The Pour House Cafe </a></h4>
-                                    <p><li>314 E Kirkwood Ave</li>
-									<li>Opens at 8:00 AM</li></p>
+                                    <h4 class = "pull-right"> 16 Minutes </h4>
+                                    <h4><a href = "#"> Panera Bread </a></h4>
+                                    <p><li>322 S College Mall Rd</li>
+									<li>Opens at 6:00 AM</li></p>
                                 </div>
                                 <div class = "ratings">
-                                    <p class = "pull-right"> 12 reviews </p>
+                                    <p class = "pull-right"> 18 reviews </p>
                                     <p>
                                         <span class = "glyphicon glyphicon-star"></span>
                                         <span class = "glyphicon glyphicon-star"></span>
@@ -134,9 +146,9 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/starbucks.jpg" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 8 Minutes </h4>
+                                    <h4 class = "pull-right"> 20 Minutes </h4>
                                     <h4><a href = "#"> Starbucks </a></h4>
                                     <p><li>110 S Indiana Ave</li>
 									<li>Opens at 6:00 AM</li> </p>
@@ -155,9 +167,9 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bluboy.png" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 11 Minutes </h4>
+                                    <h4 class = "pull-right"> 22 Minutes </h4>
                                     <h4><a href = "#"> Blu Boy Chocolate Cafe & Cakery </a></h4>
                                     <p><li>112 E Kirkwood Ave</li>
 									<li>Opens at 10:00 AM</li> </p>
@@ -176,15 +188,15 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/redmango.jpg" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 13 Minutes </h4>
-                                    <h4><a href = "#"> Red Mango </a></h4>
-                                    <p><li>1793 E 10th St</li>
-									<li>Opens at 12:00 PM</li> </p>
+                                    <h4 class = "pull-right"> 24 Minutes </h4>
+                                    <h4><a href = "#"> Bub's Burger & Ice Cream </a></h4>
+                                    <p><li>480 N Morton St</li>
+									<li>Opens at 11:00 AM</li> </p>
                                 </div>
                                 <div class = "ratings">
-                                    <p class = "pull-right"> 31 reviews </p>
+                                    <p class = "pull-right"> 20 reviews </p>
                                     <p>
                                         <span class = "glyphicon glyphicon-star"></span>
                                         <span class = "glyphicon glyphicon-star"></span>
@@ -197,9 +209,30 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/ChocoMoose.png" alt = """>
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 16 Minutes </h4>
+                                    <h4 class = "pull-right"> 22 Minutes </h4>
+                                    <h4><a href = "#"> McAlister's Deli </a></h4>
+                                    <p><li>2510 E 3rd St</li>
+									<li>Opens at 10:30 AM</li> </p>
+                                </div>
+                                <div class = "ratings">
+                                    <p class = "pull-right"> 16 reviews </p>
+                                    <p>
+                                        <span class = "glyphicon glyphicon-star"></span>
+                                        <span class = "glyphicon glyphicon-star"></span>
+                                        <span class = "glyphicon glyphicon-star"></span>
+                                        <span class = "glyphicon glyphicon-star"></span>
+                                        <span class = "glyphicon glyphicon-star-empty"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class = "col-sm-4 col-lg-4 col-md-4">
+                            <div class = "thumbnail">
+                                <img src = "http://placehold.it/320x150" alt = "">
+                                <div class = "caption">
+                                    <h4 class = "pull-right"> 25 Minutes </h4>
                                     <h4><a href = "#"> The Chocolate Moose </a></h4>
                                     <p><li>401 S Walnut St</li>
 									<li>Opens at 11:00 AM</li> </p>
@@ -216,35 +249,14 @@
                                 </div>
                             </div>
                         </div>  
-                        <div class = "col-sm-4 col-lg-4 col-md-4">
-                            <div class = "thumbnail">
-                                <img src = "include/panerabread.jpg" alt = "">
-                                <div class = "caption">
-                                    <h4 class = "pull-right"> 20 Minutes </h4>
-                                    <h4><a href = "#"> Panera Bread </a></h4>
-                                    <p><li>322 S College Mall Rd</li>
-									<li>Opens at 06:00 AM</li> </p>
-                                </div>
-                                <div class = "ratings">
-                                    <p class = "pull-right"> 18 reviews </p>
-                                    <p>
-                                        <span class = "glyphicon glyphicon-star"></span>
-                                        <span class = "glyphicon glyphicon-star"></span>
-                                        <span class = "glyphicon glyphicon-star"></span>
-                                        <span class = "glyphicon glyphicon-star"></span>
-                                        <span class = "glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>  
 
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/scholarsinnbakehouse.jpg" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
-                                    <h4 class = "pull-right"> 23 Minutes </h4>
-                                    <h4><a href = "#"> Scholars Inn Bakehouse </a></h4>
-                                    <p><li>125 N College Ave</li>
+                                    <h4 class = "pull-right"> 26 Minutes </h4>
+                                    <h4><a href = "#"> Stone Cutters Cafe & Roastery </a></h4>
+                                    <p><li>919 15th St</li>
 									<li>Opens at 07:30 AM</li> </p>
                                 </div>
                                 <div class = "ratings">
@@ -261,15 +273,15 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bloomingtonbagelco.gif" alt = "">
+                                <img src = "http://placehold.it/320x150" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 29 Minutes </h4>
-                                    <h4><a href = "#"> Bloomington Bagel Co </a></h4>
-                                    <p><li>913 S College Mall Rd</li>
-									<li>Opens at 06:00 AM</li> </p>
+                                    <h4><a href = "#"> Red Mango </a></h4>
+                                    <p><li>1793 E 10th St</li>
+									<li>Opens at 12:00 AM</li> </p>
                                 </div>
                                 <div class = "ratings">
-                                    <p class = "pull-right"> 3 reviews </p>
+                                    <p class = "pull-right"> 31 reviews </p>
                                     <p>
                                         <span class = "glyphicon glyphicon-star"></span>
                                         <span class = "glyphicon glyphicon-star"></span>

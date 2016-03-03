@@ -1,3 +1,13 @@
+<?PHP
+require_once("./include/membersite_config.php");
+
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("login.php");
+    exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,9 +42,8 @@
                     <li><a class="page-scroll" href="#starter"> Start! </a></li>
                     <li><a class="page-scroll" href="#pickup"> Pick-Up </a></li>
                     <li><a class="page-scroll" href="#delivery">Delivery</a></li>
-                    <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
-                    <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>       
+                    <li><a href = "#"><span class = "glyphicon glyphicon-user"> Account Settings </span></a></li>
+                    <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"> Log-Out </span></a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +65,7 @@
                     <h2 class="section-heading"> Pick-Up Service </h2>
                     <hr class="light">
                     <p class="text-faded">Schedule your Pick-Up order where you want in Bloomington! Tired of waiting in the line..? This is the right service for you! </p>
-                    <a href="pickup.html" class="page-scroll btn btn-default btn-xl">Make Pick-Up Order</a>
+                    <a href="pickup_con.php" class="page-scroll btn btn-default btn-xl">Make Pick-Up Order</a>
                 </div>
             </div>
         </div>
@@ -68,7 +77,7 @@
                     <h2 class="section-heading"> Delivery Service </h2>
                     <hr class="primary">
                     <p>Schedule your Delivery order where you want in Bloomington! Need coffee in Wells Library to overcome the Final week? This is the right service for you!</p>
-                    <a href="delivery.html" class="page-scroll btn btn-default btn-xl" id = "different_btn" >Make Delivery Order</a>
+                    <a href="delivery_con.php" class="page-scroll btn btn-default btn-xl" id = "different_btn" >Make Delivery Order</a>
                 </div>
             </div>
         </div>
@@ -79,7 +88,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Any questions for our service? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <p>123-456-6789</p>

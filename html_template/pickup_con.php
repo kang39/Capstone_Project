@@ -1,3 +1,14 @@
+<?PHP
+require_once("./include/membersite_config.php");
+
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -26,10 +37,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="pickup.html"> Pick-Up </a></li>
-                        <li><a href="delivery.html">Delivery</a></li>
-                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
-                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
+                        <li><a href="pickup_con.php"> Pick-Up </a></li>
+                        <li><a href="delivery_con.php">Delivery</a></li>
+                        <li><a href = "#"><span class = "glyphicon glyphicon-user"> Account Settings </span></a></li>
+                        <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"> Log-Out </span></a></li>    
                     </ul>
                 </div>
             </div>
@@ -92,7 +103,7 @@
                     <div class = "row">
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/soma.jpg" alt = "">
+                                <img src = "include/soma.jpg" alt = "" width = "320" height = "150">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 5 Minutes </h4>
                                     <h4><a href = "#"> Soma </a></h4>
@@ -113,7 +124,7 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/thepourhousecafe.jpg" alt = "">
+                                <img src = "include/thepourhousecafe.jpg" alt = "" width = "320" height = "150">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 6 Minutes </h4>
                                     <h4><a href = "#"> The Pour House Cafe </a></h4>
@@ -134,7 +145,7 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/starbucks.jpg" alt = "">
+                                <img src = "include/starbucks.jpg" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 8 Minutes </h4>
                                     <h4><a href = "#"> Starbucks </a></h4>
@@ -155,7 +166,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bluboy.png" alt = "">
+                                <img src = "include/bluboy.png" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 11 Minutes </h4>
                                     <h4><a href = "#"> Blu Boy Chocolate Cafe & Cakery </a></h4>
@@ -176,7 +187,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/redmango.jpg" alt = "">
+                                <img src = "include/redmango.jpg" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 13 Minutes </h4>
                                     <h4><a href = "#"> Red Mango </a></h4>
@@ -197,7 +208,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/ChocoMoose.png" alt = """>
+                                <img src = "include/ChocoMoose.png" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 16 Minutes </h4>
                                     <h4><a href = "#"> The Chocolate Moose </a></h4>
@@ -218,7 +229,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/panerabread.jpg" alt = "">
+                                <img src = "include/panerabread.jpg" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 20 Minutes </h4>
                                     <h4><a href = "#"> Panera Bread </a></h4>
@@ -240,7 +251,7 @@
 
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/scholarsinnbakehouse.jpg" alt = "">
+                                <img src = "include/scholarsinnbakehouse.jpg" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 23 Minutes </h4>
                                     <h4><a href = "#"> Scholars Inn Bakehouse </a></h4>
@@ -261,7 +272,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bloomingtonbagelco.gif" alt = "">
+                                <img src = "include/bloomingtonbagelco.gif" alt = "" width = 320px height = 150px>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 29 Minutes </h4>
                                     <h4><a href = "#"> Bloomington Bagel Co </a></h4>
