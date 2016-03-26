@@ -28,9 +28,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="pickup.html"> Pick-Up </a></li>
                         <li><a href="delivery.html">Delivery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"> Sign-Up </span></a></li>
-                        <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"> Login </span></a></li>  
+                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
+                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
                     </ul>
                 </div>
             </div>
@@ -50,11 +49,11 @@
                     <div class = "list-group">
                         <a href = "#" class = "list-group-item active"> All </a>
                         <a href = "#" class = "list-group-item"> Bloomington Bagel Co </a>
-                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Café & Cakery </a>
+                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Cafe & Cakery </a>
 						<a href = "#" class = "list-group-item"> Red Mango </a>
 						<a href = "#" class = "list-group-item"> Panera Bread </a>
 						<a href = "#" class = "list-group-item"> Scholars Inn Bakehouse </a>
-						<a href = "#" class = "list-group-item"> Soma </a>
+						<a href = "http://cgi.soic.indiana.edu/~team11/soma.html" class = "list-group-item"> Soma </a>
 						<a href = "#" class = "list-group-item"> Starbucks </a>
 						<a href = "#" class = "list-group-item"> The Chocolate Moose </a>
 						<a href = "#" class = "list-group-item"> The Pour House Cafe </a>
@@ -62,41 +61,58 @@
                     </div>
                 </div>
                 <div class = "col-md-9">
-                    <div class = "row carousel-holder">
-                        <div class = "col-md-12">
-                            <div id = "myCarousel" class = "carousel slide" data-ride = "carousel">
-                                <ol class = "carousel-indicators">
-                                    <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
-                                    <li data-target = "#myCarousel" data-slide-to = "1"></li>
-                                    <li data-target = "#myCarousel" data-slide-to = "2"></li>
-                                </ol>
-                                <div class = "carousel-inner">
-                                    <div class = "item active">
-                                        <img class = "slide-image" src = "http://placehold.it/800x300" alt = "" width = 877.5px>
-                                    </div>
-                                    <div class = "item">
-                                        <img class = "slide-image" src = "http://placehold.it/800x300" alt = "" width = 877.5px>
-                                    </div>
-                                    <div class = "item">
-                                        <img class = "slide-image" src = "http://placehold.it/800x300" alt = "" width = 877.5px>
-                                    </div>
-                                </div>
-                                <a class = "left carousel-control" href = "#myCarousel" data-slide = "prev">
-                                    <span class = "glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class = "right carousel-control" href = "#myCarousel" data-slide = "next">
-                                    <span class = "glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>  
-                        </div>                    
-                    </div>
-                    <div class = ".row">
+					<a href="#" id="get_location">Get location</a>
+				<div id="map">
+					<iframe id="google_map" width="850" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/api/js?sensor=false"></iframe>
+				</div>
+				<script type="text/javascript">
+					var locations = [
+					  ['Starbucks_IU', 39.166107, -86.526934, 4],
+					  ['Starbucks_IMU', 39.167876, -86.524164, 5],
+					  ['Starbucks_B', 39.165677, -86.498640, 3],
+					  ['Starbucks_J', 39.168504, -86.573092, 2],
+					  ['Starbucks_W', 39.145492, -86.531586, 1]
+					  ['Starbucks_C', 39.161752, -86.494205, 4],
+					  ['Soma_3rd', 39.163889, -86.516263, 5],
+					  ['Soma_d', 39.166187, -86.529961, 3],
+					  ['ThePourHouseCafe', 39.166342, -86.53072, 2],
+					  ['RuncibleSpoon', 39.167327, -86.529073, 1]
+					];
+
+					var map = new google.maps.Map(document.getElementById('map'), {
+					  zoom: 10,
+					  center: new google.maps.LatLng(-33.92, 151.25),
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					});
+
+					var infowindow = new google.maps.InfoWindow();
+
+					var marker, i;
+
+					for (i = 0; i < locations.length; i++) { 
+					  marker = new google.maps.Marker({
+						position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+						map: map
+					  });
+
+					  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+						return function() {
+						  infowindow.setContent(locations[i][0]);
+						  infowindow.open(map, marker);
+						}
+					  })(marker, i));
+					}
+				 </script>
+  
+
+				<br></br>
+                    <div class = "row">
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "http://placehold.it/320x150" alt = "" >
+                                <a href = "http://cgi.soic.indiana.edu/~team11/soma.html"><img src = "include/soma.jpg" alt = ""></a>
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 5 Minutes </h4>
-                                    <h4><a href = "#"> Soma </a></h4>
+                                    <h4><a href = "http://cgi.soic.indiana.edu/~team11/soma.html"> Soma </a></h4>
                                     <p><li>322 E Kirkwood Ave</li>
 									<li>Opens at 6:30 AM</li></p>
                                 </div>
@@ -114,7 +130,7 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/thepourhousecafe.jpg" alt = "" >
+                                <img src = "include/thepourhousecafe.jpg" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 6 Minutes </h4>
                                     <h4><a href = "#"> The Pour House Cafe </a></h4>
@@ -135,7 +151,7 @@
                         </div>
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/starbucks.jpg" alt = "" width = 320px height = 150px>
+                                <img src = "include/starbucks.jpg" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 8 Minutes </h4>
                                     <h4><a href = "#"> Starbucks </a></h4>
@@ -156,7 +172,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bluboy.png" alt = "" width = 320px height = 150px>
+                                <img src = "include/bluboy.png" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 11 Minutes </h4>
                                     <h4><a href = "#"> Blu Boy Chocolate Cafe & Cakery </a></h4>
@@ -177,7 +193,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/redmango.jpg" alt = "" width = 320px height = 150px>
+                                <img src = "include/redmango.jpg" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 13 Minutes </h4>
                                     <h4><a href = "#"> Red Mango </a></h4>
@@ -198,7 +214,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/chocolatemoose.jpg" alt = "" width = 320px height = 150px>
+                                <img src = "include/ChocoMoose.png" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 16 Minutes </h4>
                                     <h4><a href = "#"> The Chocolate Moose </a></h4>
@@ -219,7 +235,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/panerabread.jpg" alt = "" width = 320px height = 150px>
+                                <img src = "include/panerabread.jpg" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 20 Minutes </h4>
                                     <h4><a href = "#"> Panera Bread </a></h4>
@@ -241,7 +257,7 @@
 
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/scholarsinnbakehouse.jpg" alt = "" width = 320px height = 150px>
+                                <img src = "include/scholarsinnbakehouse.jpg" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 23 Minutes </h4>
                                     <h4><a href = "#"> Scholars Inn Bakehouse </a></h4>
@@ -262,7 +278,7 @@
                         </div>  
                         <div class = "col-sm-4 col-lg-4 col-md-4">
                             <div class = "thumbnail">
-                                <img src = "include/bloomingtonbagelco.png" alt = "" width = 320px height = 150px>
+                                <img src = "include/bloomingtonbagelco.gif" alt = "">
                                 <div class = "caption">
                                     <h4 class = "pull-right"> 29 Minutes </h4>
                                     <h4><a href = "#"> Bloomington Bagel Co </a></h4>

@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>BQ Map</title>
-	</head>
-	<body>
-		<a href="#" id="get_location">Get location</a>
-		<div id="map">
-			<iframe id="google_map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com?output=embed"></iframe>
-		</div>
-		
-		<script>
-		var c = function(pos) {
+(function() {
+  window.onload = function() {
+
+var c = function(pos) {
 			var lat = pos.coords.latitude,
 				long = pos.coords.longitude,
 				acc = pos.coords.accuracy,
@@ -23,16 +14,14 @@
 			if (error.code === 1) {
 				alert('Unable to get location');
 			}
-			
 		}	
 		
 		document.getElementById('get_location').onclick = function() {
 			navigator.geolocation.getCurrentPosition(c, e, {
 				enableHighAccuracy: true,
-				
 			});
 			return false;
 		}
-		</script>
-	</body>
-</html>
+		
+  }
+})();

@@ -42,8 +42,8 @@ if(!$fgmembersite->CheckLogin())
                     <li><a class="page-scroll" href="#starter"> Start! </a></li>
                     <li><a class="page-scroll" href="#pickup"> Pick-Up </a></li>
                     <li><a class="page-scroll" href="#delivery">Delivery</a></li>
-                    <li><a href = "#"><span class = "glyphicon glyphicon-user"> Account Settings </span></a></li>
-                    <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"> Log-Out </span></a></li>
+                    <li><a href = "user_set.php"><span class = "glyphicon glyphicon-cog"></span> &nbsp<?= $fgmembersite->UserFullName(); ?>&nbsp Settings </a></li>
+                    <li><a href="logout.php"><span class = "glyphicon glyphicon-log-out"></span> &nbspLog-Out </a></li>  
                 </ul>
             </div>
         </div>
