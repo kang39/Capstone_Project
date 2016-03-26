@@ -1,3 +1,14 @@
+<?PHP
+require_once("./include/membersite_config.php");
+
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -28,8 +39,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="pickup.html"> Pick-Up </a></li>
                         <li><a href="delivery.html">Delivery</a></li>
-                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
-                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
+                        <li><a href = "user_set.php"><span class = "glyphicon glyphicon-cog"></span> &nbsp<?= $fgmembersite->UserFullName(); ?>&nbsp Settings </a></li>
+                        <li><a href="logout.php"><span class = "glyphicon glyphicon-log-out"></span> &nbspLog-Out </a></li>   
                     </ul>
                 </div>
             </div>
@@ -61,7 +72,7 @@
                             <div class = "thumbnail">
                                 <img src = "include/roastcoffee.jpg" alt = "">
                                 <div class = "caption">
-                                    <center><h4><a href = "http://cgi.soic.indiana.edu/~team11/Mulawi.html"> Mulawi </a></h4></center>
+                                    <center><h4><a href = "Mulawi_con.php"> Mulawi </a></h4></center>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +80,7 @@
                             <div class = "thumbnail">
                                 <img src = "include/kenyaaa.jpg" alt = "">
                                 <div class = "caption">
-                                    <center><h4><a href = "http://cgi.soic.indiana.edu/~team11/Kenya.html"> Kenya AA </a></h4></center>
+                                    <center><h4><a href = "Kenya.html"> Kenya AA </a></h4></center>
                                 </div>
                             </div>
                         </div>
