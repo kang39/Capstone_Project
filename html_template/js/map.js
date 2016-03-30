@@ -167,7 +167,21 @@
 		var marker17 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.170302, -86.536090),
 			map: map,
-			title: 'Bub's Burger & Ice Cream',
+			title: "Bub's Burger & Ice Cream",
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+		});
+		
+		var marker18 = new google.maps.Marker({
+			position: new google.maps.LatLng(39.162750, -86.501890),
+			map: map,
+			title: "McAlister's Deli",
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/blank.png'
+		});
+		
+		var marker19 = new google.maps.Marker({
+			position: new google.maps.LatLng(38.862368, -86.483419),
+			map: map,
+			title: "Stone Cutter's Cafe & Roastery",
 			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
 		});
 		
@@ -237,7 +251,15 @@
 		});
 		
 		var infowndow17 = new google.maps.InfoWindow({
-			content: 'Bub's Burger & Ice Cream'
+			content: "Bub's Burger & Ice Cream"
+		});
+		
+		var infowindow18 = new google.maps.InfoWindow({
+			content: "McAlister's Deli"
+		});
+		
+		var infowindow19 = new google.maps.InfoWindow({
+			content: "Stone Cutter's Cafe & Roastery"
 		});
 		
 		// Adding a click event to a marker
@@ -308,6 +330,14 @@
 		
 		google.maps.event.addListener(marker17, 'click', function() {
 			infowindow17.open(map, marker17);
+		});
+		
+		google.maps.event.addListener(marker18, 'click', function() {
+			infowindow18.open(map, marker18);
+		});
+		
+		google.maps.event.addListener(marker19, 'click', function() {
+			infowindow19.open(map, marker19);
 		});
 		
 	};
