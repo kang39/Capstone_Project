@@ -82,5 +82,15 @@ if(isset($_POST['submitted']))
             </script>
             </div>
         </div>
+        <div class = "container">
+            <hr>
+            <footer>
+                <div class = "row">
+                    <div class = "col-lg-12" align = "center">
+                        <p> Copyright & Copy; Team Core 2016 </p>                    
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
