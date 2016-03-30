@@ -12,58 +12,75 @@ if(isset($_POST['submitted']))
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head>
-      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-      <title>Reset Password Request</title>
-      <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
-</head>
-<body>
-<!-- Form Code Start -->
-<div id='fg_membersite'>
-<form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-<fieldset >
-<legend>Reset Password</legend>
 
-<input type='hidden' name='submitted' id='submitted' value='1'/>
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width= device-width, initial-scale = 1">
+        <meta name = "description" content = "Informatics Capstone Project: Template for Team Core">
+        <title> BeQuick: The Beverage Delivery </title>
+        <link rel = "stylesheet" href = "css/bootstrap.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/template_form.css">
+        <link rel = "stylesheet" href= "style/fg_membersite.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <script type='text/javascript' src='scripts/gen_validatorv4.js'></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"> BQ Service: Drink your Happiness! </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="store.html"> Store </a></li>
+                        <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
+                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class = "container" id = "form1">
+            <div id='fg_membersite' >
+                <form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+                    <fieldset >
+                    <legend>Reset Password</legend>
 
-<div class='short_explanation'>* required fields</div>
+                    <input type='hidden' name='submitted' id='submitted' value='1'/>
 
-<div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
-<div class='container'>
-    <label for='username' >Your Email*:</label><br/>
-    <input type='text' name='email' id='email' value='<?php echo $fgmembersite->SafeDisplay('email') ?>' maxlength="50" /><br/>
-    <span id='resetreq_email_errorloc' class='error'></span>
-</div>
-<div class='short_explanation'>A link to reset your password will be sent to the email address</div>
-<div class='container'>
-    <input type='submit' name='Submit' value='Submit' />
-</div>
+                    <div class='short_explanation'>* required fields</div>
 
-</fieldset>
-</form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
+                    <div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
+                    <div class='container'>
+                        <label for='username' >Your Email*:</label><br/>
+                        <input type='text' name='email' id='email' value='<?php echo $fgmembersite->SafeDisplay('email') ?>' maxlength="50" /><br/>
+                        <span id='resetreq_email_errorloc' class='error'></span>
+                    </div>
+                    <div class='short_explanation'>A link to reset your password will be sent to the email address</div>
+                    <div class='container'>
+                        <input type='submit' name='Submit' value='Submit' />
+                    </div>
 
-<script type='text/javascript'>
-// <![CDATA[
+                    </fieldset>
+                </form>
+            <script type='text/javascript'>
+                var frmvalidator  = new Validator("resetreq");
+                frmvalidator.EnableOnPageErrorDisplay();
+                frmvalidator.EnableMsgsTogether();
 
-    var frmvalidator  = new Validator("resetreq");
-    frmvalidator.EnableOnPageErrorDisplay();
-    frmvalidator.EnableMsgsTogether();
-
-    frmvalidator.addValidation("email","req","Please provide the email address used to sign-up");
-    frmvalidator.addValidation("email","email","Please provide the email address used to sign-up");
-
-// ]]>
-</script>
-
-</div>
-<!--
-Form Code End (see html-form-guide.com for more info.)
--->
-
-</body>
+                frmvalidator.addValidation("email","req","Please provide the email address used to sign-up");
+                frmvalidator.addValidation("email","email","Please provide the email address used to sign-up");
+            </script>
+            </div>
+        </div>
+    </body>
 </html>
