@@ -40,10 +40,10 @@ if(!$fgmembersite->CheckLogin())
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="page-scroll" href="#starter"> Start! </a></li>
-                    <li><a class="page-scroll" href="#pickup"> Pick-Up </a></li>
-                    <li><a class="page-scroll" href="#delivery">Delivery</a></li>
+                    <li><a class="page-scroll" href="#store"> Store </a></li>
+                    <li><a class="page-scroll" href="#contact"> Contact </a></li>
                     <li><a href = "user_set.php"><span class = "glyphicon glyphicon-cog"></span> &nbsp<?= $fgmembersite->UserFullName(); ?>&nbsp Settings </a></li>
-                    <li><a href="logout.php"><span class = "glyphicon glyphicon-log-out"></span> &nbspLog-Out </a></li>  
+                    <li><a href="logout.php"><span class = "glyphicon glyphicon-log-out"></span> &nbspLog-Out </a></li>        
                 </ul>
             </div>
         </div>
@@ -54,41 +54,29 @@ if(!$fgmembersite->CheckLogin())
                 <h1> Drink Your Happiness!</h1>
                 <hr>
                 <p>We deliver and schedule your needs to drink your Happiness. Start our service to make an order for Delivery & Take-Out!</p>
-                <a href="#pickup" class="btn btn-primary btn-xl page-scroll"> Get Started </a>
+                <a href="#store" class="btn btn-primary btn-xl page-scroll"> Get Started </a>
             </div>
         </div>
     </header>
-    <section class="bg-primary" id = "pickup">
+    <section class="bg-primary" id = "store">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading"> Pick-Up Service </h2>
+                    <h2 class="section-heading"> Pick-Up & Delivery Service </h2>
                     <hr class="light">
-                    <p class="text-faded">Schedule your Pick-Up order where you want in Bloomington! Tired of waiting in the line..? This is the right service for you! </p>
-                    <a href="pickup_con.php" class="page-scroll btn btn-default btn-xl">Make Pick-Up Order</a>
+                    <p class="text-faded">Schedule your Pick-Up and Delibery order where you want in Bloomington! Tired of waiting in the line..? This is the right service for you! </p>
+                    <a href="store.html" class="page-scroll btn btn-default btn-xl">Make an Order</a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="delivery">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading"> Delivery Service </h2>
-                    <hr class="primary">
-                    <p>Schedule your Delivery order where you want in Bloomington! Need coffee in Wells Library to overcome the Final week? This is the right service for you!</p>
-                    <a href="delivery_con.php" class="page-scroll btn btn-default btn-xl" id = "different_btn" >Make Delivery Order</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class = "bg-primary" id="contact">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Any questions for our service? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <p>123-456-6789</p>

@@ -7,16 +7,25 @@
         <meta name = "description" content = "Informatics Capstone Project: Template for Team Core">
         <title> BeQuick: The Beverage Pick-Up </title>
         <link rel = "stylesheet" href = "css/bootstrap.min.css">
-		<style type="text/css">
+	<style type="text/css">
 		.joinform{  align: top; float:left;    }
-#lbform {height: auto;margin: 0px auto;padding: 0;position: relative;width: 500px; align:left;}
+		#lbform {height: auto;margin: 0px auto;padding: 0;position: relative;width: 500px; align:left;}
 
-</style>
+	</style>
         <link rel = "stylesheet" type = "text/css" href = "css/template.css">
         <link rel = "stylesheet" href= "css/offcanvas.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    </head>
+<script type="text/javascript">
+<!--
+function getContinueShoppingURL(form){
+
+// -- Get the href of the currently displayed webpage --
+form.shopping_url.value = window.location.href;
+}
+//-->
+</script>
+</head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -33,7 +42,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="store.html"> Store </a></li>
                         <li><a href = "register.php"><span class = "glyphicon glyphicon-user"></span> &nbspSign-Up </a></li>
-                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>    
+                        <li><a href="login.php"><span class = "glyphicon glyphicon-log-in"></span> &nbspLogin </a></li>  
                     </ul>
                 </div>
             </div>
@@ -53,7 +62,7 @@
                     <div class = "list-group">
                         <a href = "#" class = "list-group-item active"> All </a>
                         <a href = "#" class = "list-group-item"> Bloomington Bagel Co </a>
-                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Cafe & Cakery </a>
+                        <a href = "#" class = "list-group-item"> Blu Boy Chocolate Cafe& Cakery </a>
 						<a href = "#" class = "list-group-item"> Red Mango </a>
 						<a href = "#" class = "list-group-item"> Panera Bread </a>
 						<a href = "#" class = "list-group-item"> Scholars Inn Bakehouse </a>
@@ -68,46 +77,44 @@
                     <div class = "row carousel-holder">
                         <div class = "col-md-12">
                             <div id = "myCarousel" class = "carousel slide" data-ride = "carousel">
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+							<form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
 ">
 <input type="image" src="http://sharmabooksinternational.com/images/view_cart_button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" width="120" height="40" align="right">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-<h1>Kenya AA</h1>
+<h1> Coppuccino </h1>
 <br>
 <p>
 <div class="joinform">
-		 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<img src = "include/kenyaaa.jpg"
-         alt = "Picture of Kenya AA" align="top" hspace=10 width=300 height=150/></div>
-		 <input type="hidden" name="cmd" value="_s-xclick">
-
-		 <table>
-<tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr>
-		 <tr><td>
-		 <select name="os0">
- <option value="12 oz.">12 oz. $2.15 USD</option>
- <option value="16 oz.">16 oz. $2.75 USD</option>
- <option value="20 oz.">20 oz. $3.15 USD</option>
+	<form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<img src = "include/paneracappuccino.jpg"
+         alt = "Picture of Coppuccino" align="top" hspace=10 width=300 height=150/></div>
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="LSGYYF33QKK9W">
+<table>
+<tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+	<option value="12 oz.">12 oz. $3.35 USD</option>
+	<option value="16 oz.">16 oz. $3.85 USD</option>
+	<option value="20 oz.">20 oz. $4.20 USD</option>
 </select> </td></tr>
 <tr><td><input type="hidden" name="on1" value="Hot/Iced">Hot/Iced</td></tr><tr><td><select name="os1">
- <option value="Hot">Hot </option>
- <option value="Iced">Iced </option>
+	<option value="Hot">Hot </option>
+	<option value="Iced">Iced </option>
 </select> </td></tr>
 <tr><td><input type="hidden" name="on2" value="Any Comment?">Any Comment?</td></tr><tr><td><input type="text" name="os2" maxlength="200"></td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-">
-<input type="image" src="https://blog.paymill.com/wp-content/uploads/2013/11/add-to-cart.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"width="200" height="75">
+<input type="hidden" name="shopping_url" value="http://cgi.soic.indiana.edu/~team11/store.html">
+<input type="image" src="https://blog.paymill.com/wp-content/uploads/2013/11/add-to-cart.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" width="200" height="75">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
+
 </p>
                                 
-                                </div>
+
                                
                             </div>  
                         </div>                    
