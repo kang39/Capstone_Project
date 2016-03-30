@@ -119,6 +119,7 @@ if(isset($_POST['submitted']))
             frmvalidator.addValidation("email","email","Please provide a valid email address");
             frmvalidator.addValidation("username","req","Please provide a username");
             frmvalidator.addValidation("password","req","Please provide a password");
+            frmvalidator.addValidation("password","minlen=7","Password should be minimum of 7 characters.");
             frmvalidator.addValidation("confirm_password", "req", "Please enter a confirm password");
             frmvalidator.addValidation("confirm_password", "eqelmnt=password", "The confirmed password is not same as password Submit");
         </script>

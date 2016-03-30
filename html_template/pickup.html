@@ -11,7 +11,12 @@
         <link rel = "stylesheet" href= "css/offcanvas.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    </head>
+		<link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+		<script type="text/javascript"
+			src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+	</head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -61,33 +66,8 @@
                     </div>
                 </div>
                 <div class = "col-md-9">
-					<a href="#" id="get_location">Get location</a>
-				<div id="map">
-					<iframe id="google_map" width="850" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com?output=embed"></iframe>
-				</div>
-				<script>
-				var c = function(pos) {
-					var lat = pos.coords.latitude,
-					long = pos.coords.longitude,
-					acc = pos.coords.accuracy,
-					coords = lat + ', ' + long;
+				<div id="map"></div>
 				
-					document.getElementById('google_map').setAttribute('src', 'https://maps.google.com/?q=' + coords + '0&z=16&output=embed');
-				}
-		
-				var e = function(error) {
-					if (error.code === 1) {
-						alert('Unable to get location');
-					}
-				}	
-		
-				document.getElementById('get_location').onclick = function() {
-					navigator.geolocation.getCurrentPosition(c, e, {
-						enableHighAccuracy: true,
-					});
-					return false;
-				}
-				</script>
 				
 				
 				
