@@ -28,11 +28,7 @@ if(isset($_POST['submitted']))
         <link rel = "stylesheet" href = "css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "css/template_form.css">
         <link rel = "stylesheet" type="text/css" href="style/fg_membersite.css" />
-<<<<<<< HEAD
-        <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
-=======
         <script type='text/javascript' src='scripts/gen_validatorv4.js'></script>
->>>>>>> refs/heads/login
         <link rel = "stylesheet" type="text/css" href="style/pwdwidget.css" />
         <script src="scripts/pwdwidget.js" type="text/javascript"></script> 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -52,12 +48,7 @@ if(isset($_POST['submitted']))
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
-                        <li><a href="pickup_con.php"> Pick-Up </a></li>
-                        <li><a href="delivery_con.php">Delivery</a></li>
-=======
                         <li><a href="store_con.php"> Store </a></li>
->>>>>>> refs/heads/login
                         <li><a href = "user_set.php"><span class = "glyphicon glyphicon-cog"></span> &nbsp<?= $fgmembersite->UserFullName(); ?>&nbsp Settings </a></li>
                         <li><a href="logout.php"><span class = "glyphicon glyphicon-log-out"></span> &nbspLog-Out </a></li> 
                     </ul>
@@ -87,14 +78,6 @@ if(isset($_POST['submitted']))
                             </div>
                             <div class='container'>
                                 <label for='newpwd' >New Password*:</label><br/>
-<<<<<<< HEAD
-                                <div class='pwdwidgetdiv' id='newpwddiv' ></div>
-                                <noscript>
-                                    <input type='password' name='newpwd' id='newpwd' maxlength="50" /><br/>
-                                </noscript>
-                                <span id='changepwd_newpwd_errorloc' class='error'></span>
-                            </div><br/><br/><br/>
-=======
                                 <div class='pwdwidgetdiv' id='newpwddiv' ></div><br/>
                                 <noscript>
                                     <input type='password' name='newpwd' id='newpwd' maxlength="50" />
@@ -107,7 +90,6 @@ if(isset($_POST['submitted']))
                                 <div id='changepwd_confirm_password_errorloc' class='error'></div>
                             </div>
                             <br/>
->>>>>>> refs/heads/login
                             <div class='container'>
                                 <input type='submit' name='Submit' value='Submit' />
                             </div>
@@ -144,12 +126,9 @@ if(isset($_POST['submitted']))
             frmvalidator.EnableMsgsTogether();
             frmvalidator.addValidation("oldpwd","req","Please provide your old password");
             frmvalidator.addValidation("newpwd","req","Please provide your new password");
-<<<<<<< HEAD
-=======
             frmvalidator.addValidation("confirm_password", "req", "Please re-enter your new password")
             frmvalidator.addValidation("newpwd","minlen=7","Too Short! Minimum of 7 characters.");
             frmvalidator.addValidation("confirm_password", "eqelmnt=newpwd", "Not same as password Submit");
->>>>>>> refs/heads/login
         </script>
     </body>
 </html>
