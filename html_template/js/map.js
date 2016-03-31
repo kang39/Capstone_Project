@@ -70,21 +70,21 @@
 			position: new google.maps.LatLng(39.161752, -86.494205),
 			map: map,
 			title: 'Starbucks-Target Bloomington',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker4 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166113, -86.526904),
 			map: map,
 			title: 'Starbucks-Indiana University',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker5 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.168504, -86.573092),
 			map: map,
 			title: 'Starbucks-SR 48 & SR 37',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 			
 		var marker6 = new google.maps.Marker({
@@ -112,28 +112,28 @@
 			position: new google.maps.LatLng(39.171848, -86.529589),
 			map: map,
 			title: 'Revolution Bike & Bean',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker10 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.167327, -86.529073),
 			map: map,
 			title: 'Runcible Spoon',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker11 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166365, -86.532873),
 			map: map,
 			title: 'Blu Boy Chocolate Cafe & Cakery',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker12 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.171582, -86.510302),
 			map: map,
 			title: 'Red Mango',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker13 = new google.maps.Marker({
@@ -154,21 +154,21 @@
 			position: new google.maps.LatLng(39.167401, -86.535228),
 			map: map,
 			title: 'Scholars Inn Bake House',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker16 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.156178, -86.496994),
 			map: map,
 			title: 'Bloomington Bagel Company',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker17 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.170302, -86.536090),
 			map: map,
 			title: "Bub's Burger & Ice Cream",
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		var marker18 = new google.maps.Marker({
@@ -182,7 +182,7 @@
 			position: new google.maps.LatLng(38.862368, -86.483419),
 			map: map,
 			title: "Stone Cutter's Cafe & Roastery",
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
+			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
 		});
 		
 		// Creating an InfoWindow with a content text
