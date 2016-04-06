@@ -179,7 +179,7 @@
 		});
 		
 		var marker19 = new google.maps.Marker({
-			position: new google.maps.LatLng(38.862368, -86.483419),
+			position: new google.maps.LatLng(39.154162, -86.492636),
 			map: map,
 			title: "Stone Cutter's Cafe & Roastery",
 			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
@@ -264,79 +264,231 @@
 		
 		// Adding a click event to a marker
 		google.maps.event.addListener(marker1, 'click', function() {
+			var content1 = '<div id="info1">' +
+				'<img src="include/starbucks.jpg" alt="" />' +
+				'<h2>Starbucks</h2>' +
+				'<p>115 S SR 46 Bypass</p>' +
+				'<p>5:00 AM - 11:00 PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks 3rd St & 46 Bypass</a>' +
+				'</div>';
+			infowindow1.setContent(content1);
 			// Calling the open method of the infowindow
-			infowindow1.open(map, marker1);
+			infowindow1.open(map, marker1);	
 		});
 		
 		google.maps.event.addListener(marker2, 'click', function() {
+			var content2 = '<div id="info2">' +
+				'<img src="include/starbucks.jpg" alt="" />' +
+				'<h2>Starbucks</h2>' +
+				'<p>900 E 7th St</p>' +
+				'<p>7:00 AM - 11:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Indiana Memorial Union</a>' +
+				'</div>';
+			infowindow2.setContent(content2);
 			infowindow2.open(map, marker2);
 		});
 		
 		google.maps.event.addListener(marker3, 'click', function() {
+			var content3 = '<div id="info3">' +
+				'<img src="include/starbucks.jpg" alt="" />' +
+				'<h2>Starbucks</h2>' +
+				'<p>2966 E 3rd St</p>' +
+				'<p>8:00AM - 9:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Target Bloomington</a>' +
+				'</div>';
+			infowindow3.setContent(content3);
 			infowindow3.open(map, marker3);
 		});
 		
 		google.maps.event.addListener(marker4, 'click', function() {
+			var content4 = '<div id="info4">' +
+				'<img src="include/starbucks.jpg" alt="" />' +
+				'<h2>Starbucks</h2>' +
+				'<p>110 S Indiana Ave</p>' +
+				'<p>6:00AM - 12:00AM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Indiana University</a>' +
+				'</div>';
+			infowindow4.setContent(content4);
 			infowindow4.open(map, marker4);
 		});
 
 		google.maps.event.addListener(marker5, 'click', function() {
+			var content5 = '<div id="info5">' +
+				'<img src="include/starbucks.jpg" alt="" />' +
+				'<h2>Starbucks</h2>' +
+				'<p>284 N Jacob Dr</p>' +
+				'<P>5:00AM - 11:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-SR 48 & SR 37</a>' +
+				'</div>';
+			infowindow5.setContent(content5);
 			infowindow5.open(map, marker5);
 		});
 		
 		google.maps.event.addListener(marker6, 'click', function() {
+			var content6 = '<div id="info6">' +
+				'<img src="include/soma.jpg" alt="" />' +
+				'<h2>Soma</h2>' +
+				'<p>322 E Kirkwood Ave</p>' +
+				'<p>6:30AM - 10:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/soma.html">Soma-Downtown Bloomington</a>' +
+				'</div>';
+			infowindow6.setContent(content6);
 			infowindow6.open(map, marker6);
 		});
 		
 		google.maps.event.addListener(marker7, 'click', function() {
+			var content7 = '<div id="info7">' +
+				'<img src="include/soma.jpg" alt="" />' +
+				'<h2>Soma</h2>' +
+				'<p>1400 E 3rd St</p>' +
+				'<p>6:00AM - 9:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/soma.html">Soma-3rd Bloomington</a>' +
+				'</div>';
+			infowindow7.setContent(content7);
 			infowindow7.open(map, marker7);
 		});
 		
 		google.maps.event.addListener(marker8, 'click', function() {
+			var content8 = '<div id="info8">' +
+				'<img src="include/thepourhousecafe" alt="" />' +
+				'<h2>The Pour House Cafe</h2>' +
+				'<p>314 E Kirkwood Ave</p>' +
+				'<p>8:00AM - 9:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/pourhouse.html">The Pour House Cafe</a>' +
+				'</div>';
+			infowindow8.setContent(content8);
 			infowindow8.open(map, marker8);
 		});
 		
 		google.maps.event.addListener(marker9, 'click', function() {
+			var content9 = '<div id="info9">' +
+				'<img src="include/revolution.jpg" alt="" />' +
+				'<h2>Revolution Bike & Bean</h2>' +
+				'<p>401 E 10th St</p>' +
+				'<p>10:00AM - 6:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Revolution Bike & Bean</a>' +
+				'</div>';
+			infowindow9.setContent(content9);
 			infowindow9.open(map, marker9);
 		});
 		
 		google.maps.event.addListener(marker10, 'click', function() {
+			var content10 = '<div id="info10">' +
+				'<img src="include/runcible.jpg" alt="" />' +
+				'<h2>Runcible Spoon</h2>' +
+				'<p>425 E 6th St</p>' +
+				'<p>8:00AM - 10:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Runcible Spoon</a>' +
+				'</div>';
+			infowindow10.setContent(content10);
 			infowindow10.open(map, marker10);
 		});
 		
 		google.maps.event.addListener(marker11, 'click', function() {
+			var content11 = '<div id="info11">' +
+				'<img src="include/bluboy.png" alt="" />' +
+				'<h2>Blu Boy</h2>' +
+				'<p>112 E Kirkwood Ave</p>' +
+				'<p>10:00AM - 10:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Blue Boy Chocolate Cafe & Cakery</a>' +
+				'</div>';
+			infowindow11.setContent(content11);
 			infowindow11.open(map, marker11);
 		});
 		
 		google.maps.event.addListener(marker12, 'click', function() {
+			var content12 = '<div id="info12">' +
+				'<img src="include/redmango.jpg" alt="" />' +
+				'<h2>Red Mango</h2>' +
+				'<p>1793 E 10th St</p>' +
+				'<p>12:00PM - 10:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/redmango.html">Red Mango</a>' +
+				'</div>';
+			infowindow12.setContent(content12);
 			infowindow12.open(map, marker12);
 		});
 		
 		google.maps.event.addListener(marker13, 'click', function() {
+			var content13 = '<div id="info13">' +
+				'<img src="include/ChocoMoose.png" alt="" />' +
+				'<h2>Chocolate Moose</h2>' +
+				'<p>401 S Walnut St</p>' +
+				'<p>11:00AM - 11:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/chocomoose.html">Chocolate Moose</a>' +
+				'</div>';
+			infowindow13.setContent(content13);
 			infowindow13.open(map, marker13);
 		});
 		
 		google.maps.event.addListener(marker14, 'click', function() {
+			var content14 = '<div id="info14">' +
+				'<img src="include/panerabread.jpg" alt="" />' +
+				'<h2>Panera Bread</h2>' +
+				'<p>322 S College Mall Rd</p>' +
+				'<p>6:00AM - 10:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/panera.html">Panera Bread</a>' +
+				'</div>';
+			infowindow14.setContent(content14);
 			infowindow14.open(map, marker14);
 		});
 		
 		google.maps.event.addListener(marker15, 'click', function() {
+			var content15 = '<div id="info15">' +
+				'<img src="include/scholarsinnbakehouse.jpg" alt="" />' +
+				'<h2>Scholars Inn Bakehouse</h2>' +
+				'<p>125 N College Ave</p>' +
+				'<p>7:30AM - 9:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Scholars Inn Bakehouse</a>' +
+				'</div>';
+			infowindow15.setContent(content15);
 			infowindow15.open(map, marker15);
 		});
 		
 		google.maps.event.addListener(marker16, 'click', function() {
+			var content16 = '<div id="info16">' +
+				'<img src="include/bloomingtonbagelco.gif" alt="" />' +
+				'<h2>Bloomington Bagel Co</h2>' +
+				'<p>113 N Dunn St</p>' +
+				'<p>6:00AM - 7:00PM</p>' +
+				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Bloomington Bagel Company</a>' +
+				'</div>';
+			infowindow16.setContent(content16);
 			infowindow16.open(map, marker16);
 		});
 		
 		google.maps.event.addListener(marker17, 'click', function() {
+			var content17 = '<div id="info17">' +
+				'<img src="include/bubs.jpg" alt="" />' +
+				"<h2>Bub's Burger</h2>" +
+				'<p>480 N Morton St</p>' +
+				'<p>11:00AM - 10:00PM</p>' +
+				"<a href='http://cgi.soic.indiana.edu/~team11/bubs.html'>Bub's Burger & Ice Cream</a>" +
+				'</div>';
+			infowindow17.setContent(content17);
 			infowindow17.open(map, marker17);
 		});
 		
 		google.maps.event.addListener(marker18, 'click', function() {
+			var content18 = '<div id="info18">' +
+				'<img src="include/mcalisters.jpg" alt="" />' +
+				"<h2>McAlister's Deli</h2>" +
+				'<p>2510 E 3rd St</p>' +
+				'<p>10:30AM - 9:30PM</p>' +
+				"<a href='http://cgi.soic.indiana.edu/~team11/mcalister.html'>McAlister's Deli</a>" +
+				'</div>';
+			infowindow18.setContent(content18);
 			infowindow18.open(map, marker18);
 		});
 		
 		google.maps.event.addListener(marker19, 'click', function() {
+			var content19 = '<div id="info19">' +
+				'<img src="include/stonecutters.jpg" alt="" />' +
+				"<h2>Stone Cutter's Cafe</h2>" +
+				'<p>3297 E Covenanter Dr</p>' +
+				'<p>6:30AM - 4:00PM</p>' +
+				"<a href='http://cgi.soic.indiana.edu/~team11/stone.html'>Stone Cutter's Cafe & Roastery</a>" +
+				'</div>';
+			infowindow19.setContent(content19);
 			infowindow19.open(map, marker19);
 		});
 		
