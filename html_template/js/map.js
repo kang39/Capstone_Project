@@ -8,7 +8,7 @@
 		
 		var latlng = new google.maps.LatLng(39.164371, -86.509417);
 		var options = {
-			zoom: 16,
+			zoom: 14,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			draggableCursor: 'move',
 			draggingCursor: 'move',
@@ -45,7 +45,7 @@
 				var marker0 = new google.maps.Marker({
 					position: devCenter,
 					map: map,
-					icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png',
+					icon: 'include/mapicon/my.png',
 					animation: google.maps.Animation.BOUNCE
 				});
 			});
@@ -56,133 +56,133 @@
 			position: new google.maps.LatLng(39.165660, -86.498623),
 			map: map,
 			title: 'Starbucks 3rd St & 46 Bypass',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/orange/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker2 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.167550, -86.523879),
 			map: map,
 			title: 'Starbucks-Indiana Memorial Union',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker3 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.161752, -86.494205),
 			map: map,
 			title: 'Starbucks-Target Bloomington',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker4 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166113, -86.526904),
 			map: map,
 			title: 'Starbucks-Indiana University',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker5 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.168504, -86.573092),
 			map: map,
 			title: 'Starbucks-SR 48 & SR 37',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 			
 		var marker6 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166254, -86.530078),
 			map: map,
 			title: 'Soma-Downtown Bloomington',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/blank.png'
+			icon: 'include/mapicon/blue.png'
 		});	
 		
 		var marker7 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.163986, -86.516127),
 			map: map,
 			title: 'Soma-3rd Bloomington',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/orange/blank.png'
+			icon: 'include/mapicon/blue.png'
 		});
 		
 		var marker8 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166342, -86.530272),
 			map: map,
 			title: 'The Pour House Cafe',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/orange/blank.png'
+			icon: 'include/mapicon/blue.png'
 		});
 		
 		var marker9 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.171848, -86.529589),
 			map: map,
 			title: 'Revolution Bike & Bean',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/noservice.png'
 		});
 		
 		var marker10 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.167327, -86.529073),
 			map: map,
 			title: 'Runcible Spoon',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/noservice.png'
 		});
 		
 		var marker11 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.166365, -86.532873),
 			map: map,
 			title: 'Blu Boy Chocolate Cafe & Cakery',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/noservice.png'
 		});
 		
 		var marker12 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.171582, -86.510302),
 			map: map,
 			title: 'Red Mango',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker13 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.162781, -86.533425),
 			map: map,
 			title: 'Chocolate Moose',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/orange/blank.png'
+			icon: 'include/mapicon/blue.png'
 		});
 		
 		var marker14 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.163543, -86.499001),
 			map: map,
 			title: 'Panera Bread',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/orange/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		var marker15 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.167401, -86.535228),
 			map: map,
 			title: 'Scholars Inn Bake House',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/noservice.png'
 		});
 		
 		var marker16 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.156178, -86.496994),
 			map: map,
 			title: 'Bloomington Bagel Company',
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/noservice.png'
 		});
 		
 		var marker17 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.170302, -86.536090),
 			map: map,
 			title: "Bub's Burger & Ice Cream",
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/pink.png'
 		});
 		
 		var marker18 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.162750, -86.501890),
 			map: map,
 			title: "McAlister's Deli",
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/blank.png'
+			icon: 'include/mapicon/pink.png'
 		});
 		
 		var marker19 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.154162, -86.492636),
 			map: map,
 			title: "Stone Cutter's Cafe & Roastery",
-			icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/green/blank.png'
+			icon: 'include/mapicon/green.png'
 		});
 		
 		// Creating an InfoWindow with a content text
@@ -250,7 +250,7 @@
 			content: 'Bloomington Bagel Company'
 		});
 		
-		var infowndow17 = new google.maps.InfoWindow({
+		var infowindow17 = new google.maps.InfoWindow({
 			content: "Bub's Burger & Ice Cream"
 		});
 		
@@ -350,7 +350,7 @@
 		
 		google.maps.event.addListener(marker8, 'click', function() {
 			var content8 = '<div id="info8">' +
-				'<img src="include/thepourhousecafe" alt="" />' +
+				'<img src="include/thepourhousecafe.jpg" alt="" />' +
 				'<h2>The Pour House Cafe</h2>' +
 				'<p>314 E Kirkwood Ave</p>' +
 				'<p>8:00AM - 9:00PM</p>' +
