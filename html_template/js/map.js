@@ -45,6 +45,7 @@
 				var marker0 = new google.maps.Marker({
 					position: devCenter,
 					map: map,
+					title: 'My Location',
 					icon: 'include/mapicon/my.png',
 					animation: google.maps.Animation.BOUNCE
 				});
