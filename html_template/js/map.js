@@ -1,10 +1,9 @@
 (function() {
-	
+
 	window.onload = function() {
-		
+
 		// Creating an object literal containing the properties
 		// you want to pass to the map
-		var mapDiv = document.getElementById('map');
 		
 		var latlng = new google.maps.LatLng(39.164371, -86.509417);
 		var options = {
@@ -33,12 +32,13 @@
 		
 		// Creating the map
 		 var map = new google.maps.Map(document.getElementById('map'), options);
-		 
 		 if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
 			function(position) {
 				var lat = position.coords.latitude;
 				var lng = position.coords.longitude;
+				var p1 = new google.maps.LatLng(lat, lng);
+				var p2 = new google.maps.LatLng(39.165660,-86.4983);
 				// Creating LatLng object with latitude and longitude.
 				var devCenter = new google.maps.LatLng(lat, lng);
 				map.setCenter(devCenter);
@@ -49,9 +49,46 @@
 					icon: 'include/mapicon/my.png',
 					animation: google.maps.Animation.BOUNCE
 				});
-			});
+				// Distance
+				var distanceDiv1 = document.getElementById('distance1');
+					var d1 = new google.maps.LatLng(39.166254, -86.530078);
+					document.getElementById('distance1').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d1) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv2 = document.getElementById('distance2');
+					var d2 = new google.maps.LatLng(39.163543, -86.499001);
+					document.getElementById('distance2').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d2) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv3 = document.getElementById('distance3');
+					var d3 = new google.maps.LatLng(39.166113, -86.526904);
+					document.getElementById('distance3').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d3) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv4 = document.getElementById('distance4');
+					var d4 = new google.maps.LatLng(39.170302, -86.536090);
+					document.getElementById('distance4').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d4) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv5 = document.getElementById('distance5');
+					var d5 = new google.maps.LatLng(39.162750, -86.501890);
+					document.getElementById('distance5').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d5) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv6 = document.getElementById('distance6');
+					var d6 = new google.maps.LatLng(39.162781, -86.53342);
+					document.getElementById('distance6').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d6) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv7 = document.getElementById('distance7');
+					var d7 = new google.maps.LatLng(39.154162, -86.492636);
+					document.getElementById('distance7').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d7) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv8 = document.getElementById('distance8');
+					var d8 = new google.maps.LatLng(39.171582, -86.510302);
+					document.getElementById('distance8').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d8) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv9 = document.getElementById('distance9');
+					var d9 = new google.maps.LatLng(39.166342, -86.530272);
+					document.getElementById('distance9').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d9) / 1000).toFixed(2) + 'km';
+					});
+			
 		}
-		
+				
 		
 		var marker1 = new google.maps.Marker({
 			position: new google.maps.LatLng(39.165660, -86.498623),
@@ -270,7 +307,7 @@
 				'<h2>Starbucks</h2>' +
 				'<p>115 S SR 46 Bypass</p>' +
 				'<p>5:00 AM - 11:00 PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks 3rd St & 46 Bypass</a>' +
+				'<a href="starbucks.html">Starbucks 3rd St & 46 Bypass</a>' +
 				'</div>';
 			infowindow1.setContent(content1);
 			// Calling the open method of the infowindow
@@ -283,7 +320,7 @@
 				'<h2>Starbucks</h2>' +
 				'<p>900 E 7th St</p>' +
 				'<p>7:00 AM - 11:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Indiana Memorial Union</a>' +
+				'<a href="starbucks.html">Starbucks-Indiana Memorial Union</a>' +
 				'</div>';
 			infowindow2.setContent(content2);
 			infowindow2.open(map, marker2);
@@ -295,7 +332,7 @@
 				'<h2>Starbucks</h2>' +
 				'<p>2966 E 3rd St</p>' +
 				'<p>8:00AM - 9:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Target Bloomington</a>' +
+				'<a href="starbucks.html">Starbucks-Target Bloomington</a>' +
 				'</div>';
 			infowindow3.setContent(content3);
 			infowindow3.open(map, marker3);
@@ -307,7 +344,7 @@
 				'<h2>Starbucks</h2>' +
 				'<p>110 S Indiana Ave</p>' +
 				'<p>6:00AM - 12:00AM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-Indiana University</a>' +
+				'<a href="starbucks.html">Starbucks-Indiana University</a>' +
 				'</div>';
 			infowindow4.setContent(content4);
 			infowindow4.open(map, marker4);
@@ -319,7 +356,7 @@
 				'<h2>Starbucks</h2>' +
 				'<p>284 N Jacob Dr</p>' +
 				'<P>5:00AM - 11:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/starbucks.html">Starbucks-SR 48 & SR 37</a>' +
+				'<a href="starbucks.html">Starbucks-SR 48 & SR 37</a>' +
 				'</div>';
 			infowindow5.setContent(content5);
 			infowindow5.open(map, marker5);
@@ -331,7 +368,7 @@
 				'<h2>Soma</h2>' +
 				'<p>322 E Kirkwood Ave</p>' +
 				'<p>6:30AM - 10:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/soma.html">Soma-Downtown Bloomington</a>' +
+				'<a href="soma.html">Soma-Downtown Bloomington</a>' +
 				'</div>';
 			infowindow6.setContent(content6);
 			infowindow6.open(map, marker6);
@@ -343,7 +380,7 @@
 				'<h2>Soma</h2>' +
 				'<p>1400 E 3rd St</p>' +
 				'<p>6:00AM - 9:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/soma.html">Soma-3rd Bloomington</a>' +
+				'<a href="soma.html">Soma-3rd Bloomington</a>' +
 				'</div>';
 			infowindow7.setContent(content7);
 			infowindow7.open(map, marker7);
@@ -355,7 +392,7 @@
 				'<h2>The Pour House Cafe</h2>' +
 				'<p>314 E Kirkwood Ave</p>' +
 				'<p>8:00AM - 9:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/pourhouse.html">The Pour House Cafe</a>' +
+				'<a href="pourhouse.html">The Pour House Cafe</a>' +
 				'</div>';
 			infowindow8.setContent(content8);
 			infowindow8.open(map, marker8);
@@ -367,7 +404,7 @@
 				'<h2>Revolution Bike & Bean</h2>' +
 				'<p>401 E 10th St</p>' +
 				'<p>10:00AM - 6:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Revolution Bike & Bean</a>' +
+				'<a href="store.html">Revolution Bike & Bean</a>' +
 				'</div>';
 			infowindow9.setContent(content9);
 			infowindow9.open(map, marker9);
@@ -379,7 +416,7 @@
 				'<h2>Runcible Spoon</h2>' +
 				'<p>425 E 6th St</p>' +
 				'<p>8:00AM - 10:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Runcible Spoon</a>' +
+				'<a href="store.html">Runcible Spoon</a>' +
 				'</div>';
 			infowindow10.setContent(content10);
 			infowindow10.open(map, marker10);
@@ -391,7 +428,7 @@
 				'<h2>Blu Boy</h2>' +
 				'<p>112 E Kirkwood Ave</p>' +
 				'<p>10:00AM - 10:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Blue Boy Chocolate Cafe & Cakery</a>' +
+				'<a href="store.html">Blue Boy Chocolate Cafe & Cakery</a>' +
 				'</div>';
 			infowindow11.setContent(content11);
 			infowindow11.open(map, marker11);
@@ -403,7 +440,7 @@
 				'<h2>Red Mango</h2>' +
 				'<p>1793 E 10th St</p>' +
 				'<p>12:00PM - 10:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/redmango.html">Red Mango</a>' +
+				'<a href="redmango.html">Red Mango</a>' +
 				'</div>';
 			infowindow12.setContent(content12);
 			infowindow12.open(map, marker12);
@@ -415,7 +452,7 @@
 				'<h2>Chocolate Moose</h2>' +
 				'<p>401 S Walnut St</p>' +
 				'<p>11:00AM - 11:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/chocomoose.html">Chocolate Moose</a>' +
+				'<a href="chocomoose.html">Chocolate Moose</a>' +
 				'</div>';
 			infowindow13.setContent(content13);
 			infowindow13.open(map, marker13);
@@ -427,7 +464,7 @@
 				'<h2>Panera Bread</h2>' +
 				'<p>322 S College Mall Rd</p>' +
 				'<p>6:00AM - 10:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/panera.html">Panera Bread</a>' +
+				'<a href="panera.html">Panera Bread</a>' +
 				'</div>';
 			infowindow14.setContent(content14);
 			infowindow14.open(map, marker14);
@@ -439,7 +476,7 @@
 				'<h2>Scholars Inn Bakehouse</h2>' +
 				'<p>125 N College Ave</p>' +
 				'<p>7:30AM - 9:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Scholars Inn Bakehouse</a>' +
+				'<a href="store.html">Scholars Inn Bakehouse</a>' +
 				'</div>';
 			infowindow15.setContent(content15);
 			infowindow15.open(map, marker15);
@@ -451,7 +488,7 @@
 				'<h2>Bloomington Bagel Co</h2>' +
 				'<p>113 N Dunn St</p>' +
 				'<p>6:00AM - 7:00PM</p>' +
-				'<a href="http://cgi.soic.indiana.edu/~team11/store.html">Bloomington Bagel Company</a>' +
+				'<a href="store.html">Bloomington Bagel Company</a>' +
 				'</div>';
 			infowindow16.setContent(content16);
 			infowindow16.open(map, marker16);
@@ -463,7 +500,7 @@
 				"<h2>Bub's Burger</h2>" +
 				'<p>480 N Morton St</p>' +
 				'<p>11:00AM - 10:00PM</p>' +
-				"<a href='http://cgi.soic.indiana.edu/~team11/bubs.html'>Bub's Burger & Ice Cream</a>" +
+				"<a href='bubs.html'>Bub's Burger & Ice Cream</a>" +
 				'</div>';
 			infowindow17.setContent(content17);
 			infowindow17.open(map, marker17);
@@ -475,7 +512,7 @@
 				"<h2>McAlister's Deli</h2>" +
 				'<p>2510 E 3rd St</p>' +
 				'<p>10:30AM - 9:30PM</p>' +
-				"<a href='http://cgi.soic.indiana.edu/~team11/mcalister.html'>McAlister's Deli</a>" +
+				"<a href='mcalister.html'>McAlister's Deli</a>" +
 				'</div>';
 			infowindow18.setContent(content18);
 			infowindow18.open(map, marker18);
@@ -487,12 +524,20 @@
 				"<h2>Stone Cutter's Cafe</h2>" +
 				'<p>3297 E Covenanter Dr</p>' +
 				'<p>6:30AM - 4:00PM</p>' +
-				"<a href='http://cgi.soic.indiana.edu/~team11/stone.html'>Stone Cutter's Cafe & Roastery</a>" +
+				"<a href='stone.html'>Stone Cutter's Cafe & Roastery</a>" +
 				'</div>';
 			infowindow19.setContent(content19);
 			infowindow19.open(map, marker19);
 		});
 		
+		
+		
+		
+		
+
 	};
 	
+	
+		
+		
 }) ();
