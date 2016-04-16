@@ -49,6 +49,15 @@
 					icon: 'include/mapicon/my.png',
 					animation: google.maps.Animation.BOUNCE
 				});
+				// Distance
+				var distanceDiv4 = document.getElementById('distance4');
+					var d4 = new google.maps.LatLng(39.170302, -86.536090);
+					document.getElementById('distance4').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d4) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv5 = document.getElementById('distance5');
+					var d5 = new google.maps.LatLng(39.162750, -86.501890);
+					document.getElementById('distance5').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d5) / 1000).toFixed(2) + 'km';
+					
 			});
 		}
 		

@@ -4,8 +4,7 @@
 		
 		// Creating an object literal containing the properties
 		// you want to pass to the map
-		var mapDiv = document.getElementById('map');
-		
+				
 		var latlng = new google.maps.LatLng(39.164371, -86.509417);
 		var options = {
 			zoom: 14,
@@ -49,6 +48,23 @@
 					icon: 'include/mapicon/my.png',
 					animation: google.maps.Animation.BOUNCE
 				});
+				// Distance
+				var distanceDiv2 = document.getElementById('distance2');
+					var d2 = new google.maps.LatLng(39.163543, -86.499001);
+					document.getElementById('distance2').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d2) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv3 = document.getElementById('distance3');
+					var d3 = new google.maps.LatLng(39.166113, -86.526904);
+					document.getElementById('distance3').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d3) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv7 = document.getElementById('distance7');
+					var d7 = new google.maps.LatLng(39.154162, -86.492636);
+					document.getElementById('distance7').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d7) / 1000).toFixed(2) + 'km';
+					
+				var distanceDiv8 = document.getElementById('distance8');
+					var d8 = new google.maps.LatLng(39.171582, -86.510302);
+					document.getElementById('distance8').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d8) / 1000).toFixed(2) + 'km';
+					
 			});
 		}
 		
