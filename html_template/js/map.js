@@ -85,7 +85,7 @@
 				var distanceDiv9 = document.getElementById('distance9');
 					var d9 = new google.maps.LatLng(39.166342, -86.530272);
 					document.getElementById('distance9').innerHTML = (google.maps.geometry.spherical.computeDistanceBetween(devCenter, d9) / 1000).toFixed(2) + 'km';
-					});
+			});
 			
 		}
 				
