@@ -1,0 +1,35 @@
+INSERT INTO all_products
+(`StoreID`,`ServiceID`,`p_image`,`p_name`,`p_size`,`p_price`, `p_category`)
+VALUES
+(3, 3, 'blonderoast.jpg', 'Blonde Roast', '12oz', 2.45, 7),
+(3, 3, 'blonderoast.jpg', 'Blonde Roast', '16oz', 2.75, 7),
+(3, 3, 'blonderoast.jpg', 'Blonde Roast', '20oz', 3.05, 7),
+(3, 3, 'caffemisto.jpg', 'Caffe Misto', '12oz', 3.75, 7),
+(3, 3, 'caffemisto.jpg', 'Caffe Misto', '16oz', 4.40, 7),
+(3, 3, 'caffemisto.jpg', 'Caffe Misto', '20oz', 4.85, 7),
+(3, 3, 'clover.jpg', 'Clover Brewed Coffee', '12oz', 3.45, 7),
+(3, 3, 'clover.jpg', 'Clover Brewed Coffee', '16oz', 3.95, 7),
+(3, 3, 'clover.jpg', 'Clover Brewed Coffee', '20oz', 4.45, 7),
+(3, 3, 'decafpike.jpg', 'Decaf Pike Place Roast', '12oz', 3.75, 7),
+(3, 3, 'decafpike.jpg', 'Decaf Pike Place Roast', '16oz', 4.40, 7),
+(3, 3, 'decafpike.jpg', 'Decaf Pike Place Roast', '20oz', 4.85, 7),
+(3, 3, 'featureddark.jpg', 'Featured Dark Roast', '12oz', 3.45, 7),
+(3, 3, 'featureddark.jpg', 'Featured Dark Roast', '16oz', 3.95, 7),
+(3, 3, 'featureddark.jpg', 'Featured Dark Roast', '20oz', 4.45, 7),
+(3, 3, 'pikeplaceroast.jpg', 'Pike Place Roast', '12oz', 3.15, 7),
+(3, 3, 'pikeplaceroast.jpg', 'Pike Place Roast', '16oz', 4.05, 7),
+(3, 3, 'pikeplaceroast.jpg', 'Pike Place Roast', '20oz', 4.20, 7),
+(3, 3, 'coldbrewcoffee.jpg', 'Cold Brew Coffee', '12oz', 3.15, 8),
+(3, 3, 'coldbrewcoffee.jpg', 'Cold Brew Coffee', '16oz', 4.05, 8),
+(3, 3, 'coldbrewcoffee.jpg', 'Cold Brew Coffee', '20oz', 4.20, 8),
+(3, 3, 'coldbrewwithmilk.jpg', 'Cold Brew Coffee with Milk', '12oz', 3.55, 8),
+(3, 3, 'coldbrewwithmilk.jpg', 'Cold Brew Coffee with Milk', '16oz', 4.35, 8),
+(3, 3, 'coldbrewwithmilk.jpg', 'Cold Brew Coffee with Milk', '20oz', 4.75, 8),
+(3, 3, 'icedcoffee.jpg', 'Iced Coffee', '12oz', 3.15, 8),
+(3, 3, 'icedcoffee.jpg', 'Iced Coffee', '16oz', 4.05, 8),
+(3, 3, 'icedcoffee.jpg', 'Iced Coffee', '20oz', 4.20, 8),
+(3, 3, 'icedcoffeewithmilk.jpg', 'Iced Coffee with Milk', '12oz', 3.35, 8),
+(3, 3, 'icedcoffeewithmilk.jpg', 'Iced Coffee with Milk', '16oz', 3.75, 8),
+(3, 3, 'icedcoffeewithmilk.jpg', 'Iced Coffee with Milk', '20oz', 4.05, 8);
+
+
